@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Specification 3 </title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+
+
+    <div class="block1">
+
+    <h1> Specification 3  </h1>
+    <p>  Below you are being presented the code that was used to create this website. </p>
+    <p>  It displays the code created whilst working on a group project for module csc1034. </p>
+      <p> The code was created using html and css as well as Flask web-framework. It contains features the website look nicer and more clear to read.</p>
+
+    <h2> main.py  </h2>
+      <pre>
+        <code>
+          from flask import Flask, render_template
+
+          app = Flask(__name__)
+
+          @app.route("/")
+          def home():
+              return render_template("home.html")
+
+          @app.route("/spec_1")
+          def spec_1():
+              return render_template("spec_1.html")
+
+          @app.route("/spec_2")
+          def spec_2():
+              return render_template("spec_2.html")
+
+          @app.route("/spec_3")
+          def spec_3():
+              return render_template("spec_3.html")
+
+          @app.route("/spec_4")
+          def spec_4():
+              return render_template("spec_4.html")
+
+          if __name__ == "__main__":
+              app.run(debug=True)
+
+        </code>
+      </pre>
+
+
+      <h2> template.css </h2>
+      <pre>
+        <code>
+          body {
+          background: lightpink;
+          color: #9c246a;
+          }
+
+          pre code {
+          background-color: #eee;
+          border: 1px solid #999;
+          display: block;
+          padding: 20px;
+          }
+        </code>
+      </pre>
+
+
+    </div>
+    &#123;% endblock %&#125;
+
+    {% endblock %}
+  </body>
+</html>
